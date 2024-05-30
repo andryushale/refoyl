@@ -354,12 +354,6 @@ $(document).ready(function(){
         flex-direction: row;
         align-items: center;
     }
-    article .resource:hover
-    {
-        border: 1px solid;
-        border-radius: 1em;
-        cursor: pointer;
-    }
     article img
     {
         max-width: 100%;
@@ -458,7 +452,7 @@ $(document).ready(function(){
         font-weight: bold;
         color: #52423B;
     }
-    #quick_links .resources_container *, #search_results #results *
+    #quick_links .resources_container *
     {
         color: #52423B !important;
     }
@@ -471,8 +465,7 @@ $(document).ready(function(){
     article .resource h3, #empty_message h1
     {
         /* YIDDISH FONT*/
-        font-family: 'Yiddishkeit', 'DM Serif Display', 'Georgia'; 
-        font-weight: 700;
+        font-family: 'Yiddishkeit', 'DM Serif Display', 'Georgia';
     }
     article .resource h3
     {
@@ -582,6 +575,14 @@ $(document).ready(function(){
             color: #FEDFD3;
             background-color: #52423B !important;
         }
+        #search_results #results *
+        {
+            color: #FEDFD3 !important;
+        }
+        #search_results #results .resource
+        {
+            border-bottom: none;
+        }
         #search_results .resource a
         {
             color: #FEDFD3;
@@ -595,6 +596,7 @@ $(document).ready(function(){
         {
             align-items: center;
         }
+        
         article h3
         {
             display: flex;
@@ -617,10 +619,15 @@ $(document).ready(function(){
             gap: 75px;
             margin: 0px;
             border-bottom: 3px solid;
+            width: 100%;
         }
         article .resources_container .resource:last-child
         {
             border-color: transparent !important;
+        }
+        article .resource h3, #empty_message h1
+        {
+            font-weight: 400;
         }
         article .resource .img-stack
         {
@@ -694,6 +701,10 @@ $(document).ready(function(){
         background-color: #FEDFD3;
         color: #52423B;
     }
+    , #search_results #results *
+    {
+        color: #52423B !important;
+    }
 
     article
     {
@@ -708,6 +719,23 @@ $(document).ready(function(){
         border-radius: .75em;
         padding: 3px;
         align-self: stretch;
+    }
+    article .resource:hover
+    {
+        border: 1px solid;
+        border-radius: 1em;
+        cursor: pointer;
+    }
+    article.textlist .resource:hover
+    {
+        border: 1px solid;
+        border-radius: 1em;
+        cursor: pointer;
+    }
+
+    article .resource h3, #empty_message h1
+    {
+        font-weight: 700;
     }
     article .resource h4
     {

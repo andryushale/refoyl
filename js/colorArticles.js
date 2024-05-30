@@ -31,8 +31,6 @@ $(document).ready(function(){
             }
         );
 
-        // if mobile
-        console.log(screen.width);
         if (screen.width < 800 && !$(this).hasClass('textlist'))
             {
                 $(this).find('.resource').css('border-color', thisColors[0]);
