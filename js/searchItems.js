@@ -45,7 +45,7 @@ $('nav input').on("input", function(){
 
 function highlight(query)
 {
-    $('#results h4, #results h3, #results .comments').each(function(){
+    $('#results h4, #results h3, #results p').each(function(){
         const body = $(this).html();
         if (body.indexOf('highlight') == -1)
         {
