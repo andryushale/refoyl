@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="UTF-8">
+<title>Refoyls Yidish Veb-bletl</title>
+
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        let x = '23 35 9 43 11 27 0 16 16 14 23 0 29 14 45 16 34 27 36 43';
+        let y = x.split(' ');
+        let z = [];
+        $.each(y, function(index, value)
+        {
+            z.push(Math.floor(Number(value)*2*100)/100);
+        });
+        // console.log(z.join(' '));
+
+        $('.textlist .resources_container').each(function(){
+            if (this.scrollHeight > $(window).height()*.7)
+            {
+                $(this).parent().addClass('overflowing');
+            }
+        });
+        
+        //resize long captions in desktop view
+        if (screen.width > 800)
+        {
+            $('h4').each(function(){ 
+                if ($(this).height() > 90)
+                {
+                    $(this).parent().parent().width(230);
+                }
+            });
+        }
+        defineSVGStar();
+
+        function defineSVGStar(){
+            if (screen.width > 800)
+            {
+                customElements.define("svg-star", class extends HTMLElement {
+                connectedCallback() 
+                    {
+                        this.innerHTML = `<svg height="30" width="30">
+                        <polygon points="15.41 23.45 6.03 28.81 7.37 18.09 0 10.72 10.72 9.38 15.41 0 19.43 9.38 30.15 10.72 22.78 18.09 24.12 28.81"/>
+                        </svg>`
+                    }
+                });
+            }
+            else
+            {
+                customElements.define("svg-star", class extends HTMLElement {
+                connectedCallback() 
+                    {
+                        this.innerHTML = `<svg height="100" width="100">
+                        <polygon points="46 70 18 86 22 54 0 32 32 28 46 0 58 28 90 32 68 54 72 86"/>
+                        </svg>`
+                    }
+                });
+            }
+        }
+
+        const onClickOutside = (element, callback) => {
+            document.addEventListener('click', e => {
+            if (!element.contains(e.target)) callback();
+            });
+        };
+
+        if (screen.width > 800)
+        {
+            var h = $('header #title').height();
+            h = h/100 * 40;
+            $('header #title h1').css('font-size', `${h}px`);
+        }
+        else
+        {
+            $('nav#mobile input').attr('size', $('nav#mobile input').attr('placeholder').length);
+
+            onClickOutside($('nav#mobile').get(0), () =>  
+            {
+                $('#search_results').css('background-color', '#52423B').slideUp(500);
+                $('#results, #search_query').html('');
+                $('input').val('');
+                resizeInput.call(input);
+            }  
+        );
+        }
+
+        var input = $('nav#mobile input').get(0); // get the input element
+        input.addEventListener('input', resizeInput); // bind the "resizeInput" callback on "input" event
+        resizeInput.call(input); // immediately call the function
+
+        function resizeInput()
+        {
+            this.style.width = this.value.length+5 + "ch";
+        }
+
+
+        $('nav#mobile #nav_bullet').click(function(){
+            $('#mobile_nav_links').slideToggle();
+        });
+
+        $("a[href^=#]").click(function(e) {
+            e.preventDefault();
+            $('*').css('box-shadow', 'none');
+            var dest = $(this).attr('href');
+            if (screen.width > 800)
+            {
+                $('html,body').animate({ scrollTop: $(dest).offset().top }, 'slow');
+            }
+            else
+            {
+                $('html,body').animate({ scrollTop: $(dest).offset().top - $('nav#mobile').height()}, 'slow');
+            }
+            $(`${dest}`).css('box-shadow', 'inset 0 0 50px rgb(253, 198, 0)'); 
+        });
+    });
+  </script>
+
+<script type="module" src="js/createResources.js" defer></script>
+<script type="text/javascript" src="js/colorArticles.js"></script>
+<script type="text/javascript" src="js/colorHoverLinks.js"></script>
+<script type="module" src="js/favorites.js" defer></script>
+<script type="module" src="js/searchItems.js"></script> 
+<!-- <script type="text/javascript" src="importExportFavorites.js"></script> TODO: EXPORT/IMPORT FAVORITES -->
+<script type="text/javascript">
+$(document).ready(function(){
+    const containBackgroundsByDataID = ["YIVO Institute for Jewish Research", "Jewish Public Library", "Committee for Yiddish", "Yugntruf", "Kulanu: Helping Lost Jewish Communities", "Jewish languages", "Yiddish bulletin board", "Virtual Shtetl"];
+        for (let item in containBackgroundsByDataID)
+        {
+            $(document).find(`[data-id="${containBackgroundsByDataID[item]}"]`).closest('div.img-stack').addClass('contain');
+        }
+    $('#body_container').css('visibility', 'visible');
+});
+</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Average&family=MedievalSharp&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+/* import font */
+    @font-face {
+        font-family: 'Yiddishkeit';
+        src: url('fonts/YiddishkeitAlefAlefAlef-Bold.otf'); 
+        size-adjust: 130%;
+    }
+
+    /* structure */
+    body, h3, h4, p
+    {
+        margin: 0;
+    }
+    h1, h2, h3, h4
+    {
+        font-weight: normal;
+    }
+    *
+    {
+        box-sizing: border-box;
+        font-family: 'Bona Nova';
+    }
+    header, footer
+    {
+        width: 100vw;
+    }
+    header #title
+    {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+    header nav#web
+    {
+        display: flex;
+        align-items: stretch;
+    }
+    header nav input, header nav a
+    {
+        padding: 5px 10px;
+    }
+    header nav#web input
+    {
+        flex: 1;
+    }
+    header nav a
+    {
+        text-align: center;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #search_results
+    {
+        width: 100vw;
+        display: none;
+    }
+    #search_results #results
+    {
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        overflow: scroll;
+    }
+    #search_results #results .resource
+    {
+        gap: 10px;
+    }
+    #body_container
+    {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px;
+        visibility: hidden;
+    }
+    article .heading
+    {
+        padding: 20px;
+    }
+    article .heading h3
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    article .heading h3 span
+    {
+        padding: 0px 10px;
+        text-align: right;
+    }
+    article .heading h3 span:last-child
+    {
+        text-align: left;
+    }
+    article .resources_container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: baseline;
+        gap: 10px;
+        padding: 10px;
+    }
+    .shterndl
+    {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+    .shterndl svg
+    {
+        fill: rgba(255, 255, 255, 0.5);
+        stroke: rgba(0, 0, 0, 0.5);
+        stroke-width: 1px;
+        z-index: -1;
+    }
+    .shterndl:hover svg, .shterndl.saved svg
+    {
+        fill: rgb(223, 182, 38);
+    }
+    .img-stack
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        padding-bottom: 5px;
+        border-top-left-radius: .5em;
+        border-top-right-radius: .5em;
+        height: 120px;
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .contain
+    {
+        background-size: contain !important;
+        background-color: #FFF !important;
+    }
+    .img-stack .shterndl
+    {
+        margin-top: -40px;
+        margin-right: 5px;
+        align-content: center;
+    }
+    .textlist .shterndl
+    {
+        margin-right: 20px;
+    }
+    #quick_links .resources_container
+    {
+        gap: 20px 10px;
+        align-content: baseline;
+        justify-items: space-around;
+    }
+    #quick_links .resources_container #empty_message p, #quick_links .resources_container h1
+    {
+        padding: 0px;
+        text-align: center;
+    }
+    article #empty_message
+    {
+        padding: 0px 10% 10% 10%;
+    }
+    #display_left, #display_right
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    article.textlist .resources_container
+    {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 25px 50px;
+        max-height: calc(100vh - 100px);
+        overflow-y: scroll;
+    }
+    article.overflowing .resources_container::-webkit-scrollbar
+    {
+        width: 20px;
+    }
+    article.overflowing .resources_container::-webkit-scrollbar-thumb
+    {
+        border: 5px solid transparent;
+        background-clip: padding-box;
+        border-radius: 1em;
+        background-color: rgba(59,64,82,.8)
+    }
+    article.overflowing::after
+    {
+        content: ' '; 
+        display:block;
+        width:100%;
+        height:100px;  
+        margin-top: -100px;
+        background-image: linear-gradient(transparent 20%, #f7f9ff 100%);
+        isolation: isolate;
+        z-index: 500;
+    }
+    article.textlist .resource
+    {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    article .resource:hover
+    {
+        border: 1px solid;
+        border-radius: 1em;
+        cursor: pointer;
+    }
+    article img
+    {
+        max-width: 100%;
+    }
+    footer
+    {
+        text-align: center;
+        padding: 50px;
+    }
+
+    /* ornaments */
+    header
+    {
+        background-color: #52423B;
+        color: #FEDFD3;
+    }
+    header #title h1, footer h2
+    {
+        font-family: 'MedievalSharp';
+        text-transform: lowercase;
+    }
+    header #title h1
+    {
+        font-size: 6vh;
+    }
+    header input
+    {
+        outline: none !important;
+        background-color: #52423B;
+        color: #FEDFD3;
+        font-family: 'Bona Nova';
+        transition: all .5s ease;
+    }
+    header nav#web input
+    {
+        border-top: 1px solid #FEDFD3;
+        border-bottom: 1px solid #FEDFD3;
+        border-right: none;
+        border-left: none;
+        text-align: left;
+    }
+    header input:focus
+    {
+        font-style: italic;
+    }
+    header input:focus, header nav#web a:hover, header nav#web a:focus
+    {
+        background-color: #FEDFD3;
+        color: #52423B;
+        outline: none;
+    }
+    header input:focus::placeholder
+    {
+        color: #52423B;
+        font-style: normal;
+    }
+    header input::placeholder
+    {
+        color: #FEDFD3;
+        opacity: 1.0;
+    }
+    header a
+    {
+        text-decoration: none;
+        color: #FEDFD3;
+        border: 1px solid #FEDFD3;
+        border-right: 0px;
+    }
+    header a:hover
+    {
+        text-decoration: underline;
+    }
+    #search_results
+    {
+        padding: 20px;
+    }
+    #search_query
+    {
+        font-style: italic;
+    }
+    #search_results .highlight
+    {
+        background-color: rgb(253, 198, 0);
+    }
+    article a
+    {
+        text-decoration: none;
+        color: #000;
+    }
+    article .comments a
+    {
+        text-decoration: underline;
+    }
+    #quick_links .resources_container h1
+    {
+        font-weight: bold;
+        color: #52423B;
+    }
+    #quick_links .resources_container *, #search_results #results *
+    {
+        color: #52423B !important;
+    }
+    article .resource
+    {
+        color: #FEDFD3;
+        display: flex;
+        flex-direction: column;
+    }
+    article .resource h3, #empty_message h1
+    {
+        /* YIDDISH FONT*/
+        font-family: 'Yiddishkeit', 'DM Serif Display', 'Georgia'; 
+        font-weight: 700;
+    }
+    article .resource h3
+    {
+        font-size: 1.35em;
+        line-height: 1.35em;
+    }
+    article .resource h4, article .resource .comments
+    {
+        font-family: 'Average';
+        font-weight: normal;
+    }
+    footer
+    {
+        background-color: #52423B;
+        color: #FEDFD3;
+    }
+    footer a
+    {
+        color: #FEDFD3;
+    }
+    footer a:hover
+    {
+        text-decoration: none;
+    }
+
+
+/* responsive structure */
+
+/* MOBILE */
+@media only screen  
+    and (min-device-width: 300px) 
+    and (max-device-width: 812px) 
+    and (orientation: portrait) { 
+
+        body
+        {
+            font-size: 5vw;
+        }
+
+        #title, nav#web 
+        {
+            display: none !important;
+        }
+        header
+        {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0px;
+            z-index: 1;
+        }
+        nav#mobile
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        nav#mobile #container_row
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5vw;
+            font-size: 5vw;
+            justify-content: space-between;
+        }
+        nav#mobile h1
+        {
+            font-size: 5vw;
+            font-family: 'MedievalSharp';
+            text-transform: lowercase;
+            text-align: center;
+        }
+        nav#mobile input, nav#mobile #nav_bullet
+        {
+            border: none;
+            font-size: 5vw;
+            cursor: pointer;
+            border-radius: 2em;
+            padding: 2rem;
+            text-align: left;
+            border: 2px solid #FEDFD3;
+            background-color: #FEDFD3;
+            color: #52423B;
+            text-align: center;
+        }
+        nav#mobile input:focus
+        {
+            background-color: #52423B;
+            color: #FEDFD3;
+        }
+        nav#mobile #mobile_nav_links
+        {
+            display: none;
+            padding: 5vw;
+            border-top: 1px solid #FEDFD3;
+        }
+        nav#mobile #mobile_nav_links a
+        {
+            display: inline-block;
+            border: none;
+        }
+        nav#mobile #mobile_nav_links a:hover
+        {
+            text-decoration: underline;
+        }
+        #search_results
+        {
+            color: #FEDFD3;
+            background-color: #52423B !important;
+        }
+        #search_results .resource a
+        {
+            color: #FEDFD3;
+        }
+        #body_container
+        {
+            flex-direction: column;
+            text-align: center;
+        }
+        #search_results #results
+        {
+            align-items: center;
+        }
+        article h3
+        {
+            display: flex;
+            flex-direction: column !important;
+        }
+        article h3 span
+        {
+            text-align: center !important;
+        }
+        article .resources_container
+        {
+            flex-direction: column;
+        }
+        article .resource
+        {
+            display: flex;
+            flex-direction: row;
+            font-size: 4vw;
+            padding: 50px;
+            gap: 75px;
+            margin: 0px;
+            border-bottom: 3px solid;
+        }
+        article .resources_container .resource:last-child
+        {
+            border-color: transparent !important;
+        }
+        article .resource .img-stack
+        {
+            width: 20vw;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: visible;
+        }
+        article .resource .img-stack .shterndl
+        {
+            position: relative;
+            right: -125px;
+        }
+        article .resource .item-info
+        {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            flex: 1;
+            justify-content: center;
+            max-width: 60vw;
+        }
+        article.overflowing::after
+        {
+            margin-top: -180px;
+        }
+        article.textlist 
+        {
+            max-height: 60vh;
+        }
+        article.textlist .resources_container
+        {
+            max-height: calc(60vh - 100px);
+        }
+        .shterndl
+        {
+            width: 100px;
+            height: 100px;
+            margin: 0px !important;
+        }
+        .shterndl svg
+        {
+            stroke-width: 3px;
+        }
+        .img-stack
+        {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+    }
+@media only screen and (min-device-width: 813px)
+{
+    body
+    {
+        font-size: 1.4vw;
+    }
+
+    nav#mobile 
+    {
+        display: none !important;
+    }
+
+    header nav, header nav input
+    {
+        font-size: 1.2vw;
+    }
+
+    #search_results
+    {
+        background-color: #FEDFD3;
+        color: #52423B;
+    }
+
+    article
+    {
+        flex: 1 0 50%;
+    }
+    article .resource
+    {
+        width: 200px;
+        font-size: 1vw;
+        border: 1px solid;
+        border-color: transparent;
+        border-radius: .75em;
+        padding: 3px;
+        align-self: stretch;
+    }
+    article .resource h4
+    {
+        font-size: 1.3vw;
+    }
+    .img_stack
+    {
+        max-width: 190px;
+    }
+    #quick_links, #yiddish_organizations
+    {
+        flex: 1 0 35%;
+    }
+    #quick_links .resources_container h1
+    {
+        font-size: 3vw;
+    }
+    #dictionaries, #other_yiddish_resources
+    {
+        flex: 1 0 65%;
+    }    
+    #display_left article, #display_right article
+    {
+        flex: 0 1 content;
+    }
+    #display_right article#music
+    {
+        flex: 0 1 100%;
+    }
+    #display_left
+    {
+        flex: 0 1 35%;
+    }
+    #display_right
+    {
+        flex: 0 1 65%;
+    }
+    article.textlist 
+    {
+        max-height: 100vh;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Refoyls yidish veb-bletl</h1>
+            <img src="img/redt.png"/> 
+            <!-- TODO: LOGO REDESIGN -->
+        </div>
+        <nav id="web">
+            <input type="text" placeholder="Search"/>
+            <a href="#dictionaries">Dictionaries</a>
+            <a href="#text_tools">Text Tools</a>
+            <a href="#fonts">Fonts</a>
+            <a href="#poetry">Poetry</a>
+            <a href="#music">Music</a>
+            <a href="#yiddish_texts">Texts</a>
+            <a href="#non_yiddish_texts">Non-Yiddish Texts</a>
+            <a href="#yiddish_organizations">Yiddish Organizations</a>
+            <a href="#other_yiddish_resources">Other</a>
+            <a href="#non_ashkenazic_jewish_resources">Non-Ashkenazic Jewish Resources</a>
+        </nav>
+        <nav id="mobile">
+            <div id="container_row">
+                <input type="text" placeholder="🔍"/>
+                <h1>Refoyls yidish veb-bletl</h1>
+                <div id="nav_bullet">🟰</div>
+            </div>
+            <div id="mobile_nav_links">
+                <a href="#dictionaries">Dictionaries</a>
+                <a href="#text_tools">Text Tools</a>
+                <a href="#fonts">Fonts</a>
+                <a href="#poetry">Poetry</a>
+                <a href="#music">Music</a>
+                <a href="#yiddish_texts">Texts</a>
+                <a href="#non_yiddish_texts">Non-Yiddish Texts</a>
+                <a href="#yiddish_organizations">Yiddish Organizations</a>
+                <a href="#other_yiddish_resources">Other</a>
+                <a href="#non_ashkenazic_jewish_resources">Non-Ashkenazic Jewish Resources</a>
+            </div>
+        </nav>
+    </header>
+    <article id="search_results">
+        <div>Searching for: <span id="search_query"></span></div>
+        <div id="results"> </div>
+    </article>
+    <div id="body_container">
+        <article id="quick_links">
+            <div class="heading">
+                <h3>
+                    <span>Quick Links</span>
+                    <span>מײַן געצײַג</span>
+                </h3>
+            </div>
+            <div class="resources_container">
+                <div id="empty_message">
+                    <h1>אױ װײ!</h1>
+                    <p>You haven't saved any quick links yet.</p><br>
+                    <p>Click the star icons alongside each resource to add quick links.</p>
+                </div>
+            </div>
+        </article>
+        <article id="dictionaries"><a name="#dictionaries"></a>
+            <div class="heading">
+                <h3>
+                    <span>Dictionaries</span>
+                    <span>װערטערביכער</span>
+                </h3>
+            </div>
+            <div class="resources_container"></div>
+        </article>
+        <article id="text_tools"><a name="#text_tools"></a>
+            <div class="heading">
+                <h3>
+                    <span>Text Processing Tools</span>
+                    <span>שרײַבערקעס</span>
+                </h3>
+            </div>
+            <div class="resources_container"></div>
+        </article>
+        <article id="fonts"><a name="#fonts"></a>
+            <div class="heading">
+                <h3>
+                    <span>Fonts</span>
+                    <span>שריפטן</span>
+                </h3>
+            </div>
+            <div class="resources_container"></div>
+        </article>
+        <div id="display_left">
+            <article id="yiddish_texts" class="textlist"><a name="#yiddish_texts"></a>
+                <div class="heading">
+                    <h3>
+                        <span>Yiddish Texts</span>
+                        <span>טעקסטן אױף ייִדיש</span>
+                    </h3>
+                </div>
+                <div class="resources_container"></div>
+            </article>
+
+            <article id="non_yiddish_texts" class="textlist"><a name="#non_yiddish_texts"></a>
+                <div class="heading">
+                    <h3>
+                        <span>Non-Yiddish Texts</span>
+                        <span>טעקסטן אױף אַנדערע שפּראַכן</span>
+                    </h3>
+                </div>
+                <div class="resources_container"></div>
+            </article>
+        </div>
+        <div id="display_right">
+            <article id="poetry"><a name="#poetry"></a>
+                <div class="heading">
+                    <h3>
+                        <span>Yiddish Poetry</span>
+                        <span>ייִדישע פּאָעזיע</span>
+                    </h3>
+                </div>
+                <div class="resources_container"></div>
+            </article>
+            <article id="music"><a name="#music"></a>
+                <div class="heading">
+                    <h3>
+                        <span>Yiddish Music</span>
+                        <span>ייִדישע מוזיק</span>
+                    </h3>
+                </div>
+                <div class="resources_container"></div>
+            </article>
+        </div>
+        <article id="yiddish_organizations"><a name="#yiddish_organizations"></a>
+            <div class="heading">
+                <h3>
+                    <span>Yiddish Organizations</span>
+                    <span>ייִדיש־אָרגאַניזאַציעס</span>
+                </h3>
+            </div>
+            <div class="resources_container"></div>
+        </article>
+        <article id="other_yiddish_resources"><a name="#other_yiddish_resources"></a>
+            <div class="heading">
+                <h3>
+                    <span>Other Yiddish Resources</span>
+                    <span>אַנדערע רעסורסן פאַר ייִדיש</span>
+                </h3>
+            </div>
+            <div class="resources_container"></div>
+        </article>
+        <article id="non_ashkenazic_jewish_resources"><a name="#non_ashkenazic_jewish_resources"></a>
+            <div class="heading">
+                <h3>
+                    <span>Non-Ashkenazic Jewish Resources</span>
+                    <span>אַנדערע ייִדישע רעסורסן</span>
+                </h3>
+            </div>
+            <div class="resources_container"></div>
+        </article>
+        <!-- <article id="shutfim"> All links in this section have since expired
+            <div class="heading">
+                <h3>
+                    <span>Places where this page is listed</span>
+                    <span>שותּפים</span>
+                </h3>
+            </div>
+            <div class="resources_container"></div>
+        </article> -->
+    </div>
+    <footer>
+        <h2>Refoyls yidish veb-bletl</h2>
+        <p>
+            Maintained by <a href="https://www.cs.uky.edu/~raphael/index.html">Raphael Finkel</a>, <a href="mailto:@raphael@cs.uky.edu">raphael@cs.uky.edu</a><br>
+            Designed by <a href="https://andryusha.kuznet.net">Andryusha Kuznetsov</a>
+        </p>
+    </footer>
+</body>
+</html>
