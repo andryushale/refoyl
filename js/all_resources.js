@@ -1,385 +1,385 @@
 const allResourcesData = [{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/dictionary.cgi',
-    imgUrl: '/img/searchable-yiddish-english-dictionary.png',
+    imgUrl: '/refoyl/img/searchable-yiddish-english-dictionary.png',
     titleEn: 'Searchable Yiddish-English dictionary',
     titleYi: 'ייִדיש<wbr>־ענגליש װערטערבוך',
     comments: ''
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/searchOytser.cgi',
-    imgUrl: '/img/shutshkovs-oytser.png',
+    imgUrl: '/refoyl/img/shutshkovs-oytser.png',
     titleEn: 'Stutshkov\'s Oytser',
     titleYi: 'סטוטשקאָװס אוצר',
     comments: 'Searchable, transliteration only'
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/harkavy/index.utf8.html',
-    imgUrl: '/img/harkavys-1910-bidirectional-dictionary.png',
+    imgUrl: '/refoyl/img/harkavys-1910-bidirectional-dictionary.png',
     titleEn: 'Harkavy\'s 1910 bidirectional dictionary',
     titleYi: 'האַרקאַװיס ענגליש<wbr>־ייִדיש ייִדיש<wbr>־ענגליש װערטערבוך',
     comments: ''
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/searchGroys.cgi',
-    imgUrl: '/img/der-groyser-verterbukh-fun-der-yidisher-shprakh.png',
+    imgUrl: '/refoyl/img/der-groyser-verterbukh-fun-der-yidisher-shprakh.png',
     titleEn: 'Der Groyser Verterbukh fun der Yidisher Shprakh',
     titleYi: 'דער גרױסער װערטערבוך פון דער ייִדישער שפּראַך',
     comments: 'Searchable, Yiddish letters only'
 },{
     category: 'dictionaries',
     url: 'http://www.hebrewbooks.org/43653',
-    imgUrl: '/img/weinreichs-bidirectional-dictionary.png',
+    imgUrl: '/refoyl/img/weinreichs-bidirectional-dictionary.png',
     titleEn: 'Weinreich\'s bidirectional dictionary ',
     titleYi: 'מאָדערן ענגליש<wbr>־ייִדיש ייִדיש<wbr>־ענגליש װערטערבוך',
     comments: 'Off-site. Searchable!'
 },{
     category: 'dictionaries',
     url: 'http://www.hebrewbooks.org/43567',
-    imgUrl: '/img/harkavys-yiddish-english-hebrew-dictionary.png',
+    imgUrl: '/refoyl/img/harkavys-yiddish-english-hebrew-dictionary.png',
     titleEn: 'Harkavy\'s Yiddish-English-Hebrew dictionary',
     titleYi: 'האַרקאַװיס ייִדיש<wbr>־ענגליש<wbr>־העברעיִש װערטערבוך',
     comments: '1928 expanded 2nd edition. Off-site. Searchable!'
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/justus.cgi',
-    imgUrl: '/img/searchable-yiddish-dutch-dictionary.png',
+    imgUrl: '/refoyl/img/searchable-yiddish-dutch-dictionary.png',
     titleEn: 'Searchable Yiddish-Dutch dictionary',
     titleYi: 'ייִדיש<wbr>־האָנענדיש װערטערבוך',
     comments: 'Very comprehensive; data from Justus van de Kamp. His dictionary site is <a href="https://jnw.test.ivdnt.org/" target="_blank">Jiddische Lexicografie Amsterdam.</a>'
 },{
     category: 'dictionaries',
     url: 'http://verterbukh.org/',
-    imgUrl: '/img/verterbukh.png',
+    imgUrl: '/refoyl/img/verterbukh.png',
     titleEn: 'Comprehensive Yiddish-English Dictionary',
     titleYi: 'אַרומנעמיק ייִדיש<wbr>־ענגליש װערטערבוך',
     comments: 'Beinfeld & Bochner'
 },{
     category: 'text_tools',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/makeyiddish.html',
-    imgUrl: '/img/yiddish-typewriter-and-spelling-checker.png',
+    imgUrl: '/refoyl/img/yiddish-typewriter-and-spelling-checker.png',
     titleEn: 'Yiddish typewriter and spelling checker',
     titleYi: '',
     comments: ''
 },{
     category: 'text_tools',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/checkSpellUTF.cgi',
-    imgUrl: '/img/yiddish-spell-checker-and-normalizer.png',
+    imgUrl: '/refoyl/img/yiddish-spell-checker-and-normalizer.png',
     titleEn: 'Yiddish spell checker and normalizer',
     titleYi: '',
     comments: ''
 },{
     category: 'text_tools',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/showDefs.cgi',
-    imgUrl: '/img/redt.png',
+    imgUrl: '/refoyl/img/redt.png',
     titleEn: 'Yiddish glosser',
     titleYi: '',
     comments: 'Shows English definitions'
 },{
     category: 'fonts',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/Refoyl.ttf',
-    imgUrl: '/img/refoyl-cursive-yiddish-font.png',
+    imgUrl: '/refoyl/img/refoyl-cursive-yiddish-font.png',
     titleEn: 'Refoyl Cursive Yiddish font',
     titleYi: 'רפאל האַנטשריפט',
     comments: 'Download <a href="https://www.cs.uky.edu/~raphael/yiddish/Refoyl.dfont">Mac Truetype</a> or <a href="https://www.cs.uky.edu/~raphael/yiddish/Refoyl.ttf">TrueType</a>'
 },{
     category: 'fonts',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/Nachlaot.ttf',
-    imgUrl: '/img/nachlaot-cursive-yiddish-font.png',
+    imgUrl: '/refoyl/img/nachlaot-cursive-yiddish-font.png',
     titleEn: 'Nachlaot Cursive Yiddish font',
     titleYi: 'נחלאות האַנטשריפט',
     comments: 'Download <a href="https://www.cs.uky.edu/~raphael/yiddish/Nachlaot.dfont">Mac Truetype</a> or <a href="https://www.cs.uky.edu/~raphael/yiddish/Nachlaot.ttf">TrueType</a>'
 },{
     category: 'fonts',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/Mashkit.ttf',
-    imgUrl: '/img/maskhit-old-yiddish-font.png',
+    imgUrl: '/refoyl/img/maskhit-old-yiddish-font.png',
     titleEn: 'Mashkit Old Yiddish font',
     titleYi: 'אַלט<wbr>־ייִדישע מאַקשעט',
     comments: 'Download <a href="https://www.cs.uky.edu/~raphael/yiddish/Mashkit.ttf">TrueType</a>'
 },{
     category: 'non_ashkenazic_jewish_resources',
     url: 'http://kulanu.org/',
-    imgUrl: '/img/kulanu.png',
+    imgUrl: '/refoyl/img/kulanu.png',
     titleEn: 'Kulanu: Helping Lost Jewish Communities',
     titleYi: 'כּלנו',
     comments: ''
 },{
     category: 'non_ashkenazic_jewish_resources',
     url: 'http://jewish-languages.org/',
-    imgUrl: '/img/jewish-languages.png',
+    imgUrl: '/refoyl/img/jewish-languages.png',
     titleEn: 'Jewish languages',
     titleYi: 'ייִדישע שפּראַכן',
     comments: ''
 },{
     category: 'non_ashkenazic_jewish_resources',
     url: 'http://www.ivri-nasawi.org/',
-    imgUrl: '/img/ivri-nasawi.png',
+    imgUrl: '/refoyl/img/ivri-nasawi.png',
     titleEn: 'Ivri Nasawi: New Association of Sephardi/Mizrahi Artists & Writers International',
     titleYi: '',
     comments: ''
 },{
     category: 'non_ashkenazic_jewish_resources',
     url: 'https://www.bjhc.org.il/',
-    imgUrl: '/img/babylonian-jewry-heritage-center.png',
+    imgUrl: '/refoyl/img/babylonian-jewry-heritage-center.png',
     titleEn: 'Babylonian Jewry Heritage Center',
     titleYi: '',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://circle.org/',
-    imgUrl: '/img/workers-circle-arbeterring.png',
+    imgUrl: '/refoyl/img/workers-circle-arbeterring.png',
     titleEn: 'Workers\' Circle / Arbeterring',
     titleYi: 'דער אַרבעטעררינג',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://www.yivo.org',
-    imgUrl: '/img/yivo-institute-for-jewish-research.png',
+    imgUrl: '/refoyl/img/yivo-institute-for-jewish-research.png',
     titleEn: 'YIVO Institute for Jewish Research',
     titleYi: 'ייִװאָ: דער ייִדישער װיסנשאַפטלעכע אינסטיטוט',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://yiddishbookcenter.org/',
-    imgUrl: '/img/national-yiddish-book-center.png',
+    imgUrl: '/refoyl/img/national-yiddish-book-center.png',
     titleEn: 'National Yiddish Book Center',
     titleYi: 'דער ייִדישער ביכערצענטער',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://nytf.org/',
-    imgUrl: '/img/national-yiddish-theatre-folksbiene.png',
+    imgUrl: '/refoyl/img/national-yiddish-theatre-folksbiene.png',
     titleEn: 'National Yiddish Theatre Folksbiene',
     titleYi: 'די פאָלקסבינע',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://www.yiddishweb.com/english/',
-    imgUrl: '/img/maison-de-la-culture-yiddish-bibliotheque-medem.png',
+    imgUrl: '/refoyl/img/maison-de-la-culture-yiddish-bibliotheque-medem.png',
     titleEn: 'Maison de la culture yiddish / Bibliothèque Medem',
     titleYi: 'די מעדעם<wbr>־ביבליאָטעק',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://yilovejewish.org/',
-    imgUrl: '/img/yiddishkayt-initiative.png',
+    imgUrl: '/refoyl/img/yiddishkayt-initiative.png',
     titleEn: 'Yiddishkayt Initiative',
     titleYi: '',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://yaaana.org/',
-    imgUrl: '/img/yaaana-yiddish-arts-academics-association-of-north-america.png',
+    imgUrl: '/refoyl/img/yaaana-yiddish-arts-academics-association-of-north-america.png',
     titleEn: 'YAAANA: Yiddish Arts & Academics Association of North America',
     titleYi: '',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://jewishpubliclibrary.org/',
-    imgUrl: '/img/jewish-public-library.png',
+    imgUrl: '/refoyl/img/jewish-public-library.png',
     titleEn: 'Jewish Public Library',
     titleYi: '',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://www.committeeforyiddish.com/',
-    imgUrl: '/img/committee-for-yiddish.png',
+    imgUrl: '/refoyl/img/committee-for-yiddish.png',
     titleEn: 'Committee for Yiddish',
     titleYi: '',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://yiddishkayt.org/',
-    imgUrl: '/img/yiddishkayt-la.png',
+    imgUrl: '/refoyl/img/yiddishkayt-la.png',
     titleEn: 'Yiddishkayt LA',
     titleYi: '',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://congressforjewishculture.org/',
-    imgUrl: '/img/congress-for-jewish-culture-kultur-kongres.png',
+    imgUrl: '/refoyl/img/congress-for-jewish-culture-kultur-kongres.png',
     titleEn: 'Congress for Jewish Culture / Kultur Kongres',
     titleYi: 'דער קולטור<wbr>־קאָנגרעס',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://bethshalomaleichem.co.il/',
-    imgUrl: '/img/sholem-aleykhem-hoyz.png',
+    imgUrl: '/refoyl/img/sholem-aleykhem-hoyz.png',
     titleEn: 'Sholem Aleykhem Hoyz',
     titleYi: 'שלום<wbr>־עליכם הױז',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'http://yiddish.co.il/',
-    imgUrl: '/img/yung-yidish.png',
+    imgUrl: '/refoyl/img/yung-yidish.png',
     titleEn: 'Yung Yidish',
     titleYi: 'יונג<wbr>־ייִדיש',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'https://www.yiddish.world',
-    imgUrl: '/img/iayc-international-association-of-yiddish-clubs.png',
+    imgUrl: '/refoyl/img/iayc-international-association-of-yiddish-clubs.png',
     titleEn: 'IAYC: International Association of Yiddish Clubs',
     titleYi: '',
     comments: ''
 },{
     category: 'dictionaries',
     url: 'https://jnw.test.ivdnt.org/',
-    imgUrl: '/img/jiddische-lexicografie-amsterdam.png',
+    imgUrl: '/refoyl/img/jiddische-lexicografie-amsterdam.png',
     titleEn: 'Jiddische Lexicografie Amsterdam',
     titleYi: '',
     comments: 'Free Yiddish-Dutch dictionary, very comprehensive'
 },{
     category: 'music',
     url: 'https://ruthrubin.yivo.org/exhibits/show/ruth-rubin-sound-archive/home',
-    imgUrl: '/img/ruth-rubin-sound-archive.png',
+    imgUrl: '/refoyl/img/ruth-rubin-sound-archive.png',
     titleEn: 'Ruth Rubin Sound Archive',
     titleYi: 'רות רובין אַרכיװ',
     comments: ''
 },{
     category: 'music',
     url: 'https://yiddishsongs.org/',
-    imgUrl: '/img/the-yosl-and-chana-mlotek-yiddish-song-collection.png',
+    imgUrl: '/refoyl/img/the-yosl-and-chana-mlotek-yiddish-song-collection.png',
     titleEn: 'The Yosl and Chana Mlotek Yiddish Song Collection',
     titleYi: 'יאָסל און חנה מלאָטעק אַנטאָלאָגיע פון ייִדישע לידער',
     comments: ''
 },{
     category: 'poetry',
     url: 'https://www.xn--7dbli0a4a.us.org/',
-    imgUrl: '/img/the-online-treasury-of-yiddish-poetry.png',
+    imgUrl: '/refoyl/img/the-online-treasury-of-yiddish-poetry.png',
     titleEn: 'The Online Treasury of Yiddish Poetry',
     titleYi: 'דער אױפן<wbr>־װעב אוצר פון ייִדישע לידער',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://shoshke.net/kompyuteray/',
-    imgUrl: '/img/a-users-guide-to-yiddish-on-the-internet.png',
+    imgUrl: '/refoyl/img/a-users-guide-to-yiddish-on-the-internet.png',
     titleEn: 'A Users’ Guide to Yiddish on the Internet',
     titleYi: 'ייִדיש-קאָמפּיוטערײ',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://editions.yiddish.paris/wp-content/uploads/2021/06/%D7%A4%D6%BF%D7%90%D6%B8%D7%A0%D7%A2%D7%98%D7%99%D7%A9%D7%A2%D7%A8-%D7%90%D7%99%D7%A0%D7%93%D7%A2%D7%A7%D7%A1.pdf',
-    imgUrl: '/img/list-of-semitic-words-in-yiddish.png',
+    imgUrl: '/refoyl/img/list-of-semitic-words-in-yiddish.png',
     titleEn: 'List of Semitic words in Yiddish, organized by pronunciation',
     titleYi: 'פאָנעטישער אינדעקס פון לשון־קודש־שטאַמענדיקע װערטער אין ייִדיש',
     comments: ''
 },{
     category: 'dictionaries',
     url: 'https://www.yiddishculturaldictionary.org/',
-    imgUrl: '/img/yiddish-cultural-dictionary.png',
+    imgUrl: '/refoyl/img/yiddish-cultural-dictionary.png',
     titleEn: 'Yiddish Cultural Dictionary',
     titleYi: 'ווילנער ווערטערבוך',
     comments: 'English-Yiddish Dictionary for the 21st Century'
 },{
     category: 'other_yiddish_resources',
     url: 'https://yivoencyclopedia.org/',
-    imgUrl: '/img/yivo-encyclopedia-of-jews-in-eastern-europe.png',
+    imgUrl: '/refoyl/img/yivo-encyclopedia-of-jews-in-eastern-europe.png',
     titleEn: 'YIVO Encyclopedia of Jews in Eastern Europe',
     titleYi: 'די ייִװאָ ענציקלאָפּעדיע פון ייִדן אין מזרח־אייראָפּע',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.leyblsvelt.co.il/',
-    imgUrl: '/img/leybls-velt.png',
+    imgUrl: '/refoyl/img/leybls-velt.png',
     titleEn: 'Leybls velt',
     titleYi: 'לייבלס װעלט',
     comments: ''
 },{
     category: 'poetry',
     url: 'https://yiddishpoetry.org/',
-    imgUrl: '/img/yiddish-poetry.png',
+    imgUrl: '/refoyl/img/yiddish-poetry.png',
     titleEn: 'Yiddish poetry',
     titleYi: 'ייִדיעש פּאָעזיע',
     comments: ''
 },{
     category: 'music',
     url: 'https://rsa.fau.edu/judaic',
-    imgUrl: '/img/judaica-sound-archives-at-florida-atlantic-university.png',
+    imgUrl: '/refoyl/img/judaica-sound-archives-at-florida-atlantic-university.png',
     titleEn: 'Judaica Sound Archives at Florida Atlantic University',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.ibiblio.org/yiddish/forum/wwwboard/',
-    imgUrl: '/img/yiddish-bulletin-board.png',
+    imgUrl: '/refoyl/img/yiddish-bulletin-board.png',
     titleEn: 'Yiddish bulletin board',
     titleYi: 'שטעטל: שמועסן אױף מאַמע<wbr>־לשון',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://yiddish.forward.com/blogs/index.html',
-    imgUrl: '/img/yiddish-forward-blogs.png',
+    imgUrl: '/refoyl/img/yiddish-forward-blogs.png',
     titleEn: 'Yiddish Forward Blogs',
     titleYi: 'פאָרװערטס־בלאָגס',
     comments: ''
 },{
     category: 'music',
     url: 'https://ulrich-greve.eu/free/',
-    imgUrl: '/img/songs-by-mordechai-gebirtig.png',
+    imgUrl: '/refoyl/img/songs-by-mordechai-gebirtig.png',
     titleEn: 'Songs by Mordechai Gebirtig',
     titleYi: 'לידער פון מרדכי געבירטיג',
     comments: ''
 },{
     category: 'yiddish_organizations',
     url: 'https://yugntruf.org/',
-    imgUrl: '/img/yugntruf.png',
+    imgUrl: '/refoyl/img/yugntruf.png',
     titleEn: 'Yugntruf',
     titleYi: 'יוגנטרוף',
     comments: ''
 },{
     category: 'music',
     url: 'http://yidlid.org/',
-    imgUrl: '/img/yidlid.png',
+    imgUrl: '/refoyl/img/yidlid.png',
     titleEn: 'Yidlid: Yiddish songs',
     titleYi: 'ייִדליד: ייִדישע לידער',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.ibiblio.org/yiddish/',
-    imgUrl: '/img/virtual-shtetl.png',
+    imgUrl: '/refoyl/img/virtual-shtetl.png',
     titleEn: 'Virtual Shtetl',
     titleYi: 'אינטערנעץ־שטעטל',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://sammlungen.ub.uni-frankfurt.de/judaica/nav/index/all?&facets=language%3D%22yid%22',
-    imgUrl: '/img/yiddish-collection-digitized-at-the-goethe-universitat.png',
+    imgUrl: '/refoyl/img/yiddish-collection-digitized-at-the-goethe-universitat.png',
     titleEn: 'Yiddish collection (digitized) at the Goethe Universität',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'http://www.yv.org/',
-    imgUrl: '/img/the-yiddish-voice-radio.png',
+    imgUrl: '/refoyl/img/the-yiddish-voice-radio.png',
     titleEn: 'The Yiddish Voice Radio',
     titleYi: 'דאָס ייִדישע קול',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://urplay.se/sok?language=Jiddisch&product_type=series',
-    imgUrl: '/img/swedish-education-broadcasting-company-yiddish-programs.png',
+    imgUrl: '/refoyl/img/swedish-education-broadcasting-company-yiddish-programs.png',
     titleEn: 'Swedish Educational Broadcasting Company: Yiddish programs',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.nypl.org/locations/schwarzman/jewish-division',
-    imgUrl: '/img/new-york-public-library-dorot-jewish-division.png',
+    imgUrl: '/refoyl/img/new-york-public-library-dorot-jewish-division.png',
     titleEn: 'New York Public Library Dorot Jewish Division',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://uyip.org/',
-    imgUrl: '/img/uyip.png',
+    imgUrl: '/refoyl/img/uyip.png',
     titleEn: 'UYIP: Understanding Yiddish Information Processing',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.nli.org.il/en/newspapers/lbf?',
-    imgUrl: '/img/lebns-fragn.png',
+    imgUrl: '/refoyl/img/lebns-fragn.png',
     titleEn: 'Lebns-fragn',
     titleYi: 'לעבנס<wbr>־פראַגן',
     comments: 'Digitization of all 63 years of the organ of the Arbeter-ring in Israel.'
@@ -393,7 +393,7 @@ const allResourcesData = [{
 },{
     category: 'poetry',
     url: 'https://www.angelfire.com/ma/khaver/amerike.html',
-    imgUrl: '/img/yiddish-poetry-in-america.png',
+    imgUrl: '/refoyl/img/yiddish-poetry-in-america.png',
     titleEn: 'Yiddish Poetry in America',
     titleYi: 'ייִדישע פּאָעזיע אין אַמעריקע',
     comments: ''
@@ -407,7 +407,7 @@ const allResourcesData = [{
 },{
     category: 'yiddish_organizations',
     url: 'https://www.instagram.com/kadimahmelbourne/',
-    imgUrl: '/img/kadimah-jewish-cultural-centre-melbourne.png',
+    imgUrl: '/refoyl/img/kadimah-jewish-cultural-centre-melbourne.png',
     titleEn: 'Kadimah Jewish Cultural Centre, Melbourne',
     titleYi: 'קדימה',
     comments: ''
@@ -428,21 +428,21 @@ const allResourcesData = [{
 },{
     category: 'other_yiddish_resources',
     url: 'https://katlekanye.blogspot.com/',
-    imgUrl: '/img/katlekanyes-blog.png',
+    imgUrl: '/refoyl/img/katlekanyes-blog.png',
     titleEn: 'Katlekanye\'s blog',
     titleYi: 'קטלא קניא',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://sholemberger.blogspot.com/',
-    imgUrl: '/img/sholem-bergers-blog.png',
+    imgUrl: '/refoyl/img/sholem-bergers-blog.png',
     titleEn: 'Sholem Berger\'s blog',
     titleYi: 'שלום בערגער',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://inmolaraan.blogspot.com/',
-    imgUrl: '/img/in-mol-araan-a-blogele-vegen-esn-un-verter.png',
+    imgUrl: '/refoyl/img/in-mol-araan-a-blogele-vegen-esn-un-verter.png',
     titleEn: 'In mol araan: a blogele vegn esn un verter',
     titleYi: 'אין מױל ארײן: א בלאגעלע װעגן עסן און װערטער',
     comments: ''
@@ -456,28 +456,28 @@ const allResourcesData = [{
 },{
     category: 'music',
     url: 'https://www.livingtraditions.org/',
-    imgUrl: '/img/the-jalopy-theatre-and-school-of-music.png',
+    imgUrl: '/refoyl/img/the-jalopy-theatre-and-school-of-music.png',
     titleEn: 'The Jalopy Theatre and School of Music',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://yiddish.haifa.ac.il/contents.htm',
-    imgUrl: '/img/the-world-of-yiddish.png',
+    imgUrl: '/refoyl/img/the-world-of-yiddish.png',
     titleEn: 'The World of Yiddish',
     titleYi: 'די װעלט פון ייִדיש',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.shoshke.net/uyip/kompterm/kompterm.pdf',
-    imgUrl: '/img/computer-terminology-in-yiddish.png',
+    imgUrl: '/refoyl/img/computer-terminology-in-yiddish.png',
     titleEn: 'Computer terminology in Yiddish',
     titleYi: 'קאָמפּיוטערײַ <wbr>־טערמינען',
     comments: ''
 },{
     category: 'poetry',
     url: 'https://www.yisroelshtern.org/',
-    imgUrl: '/img/yisroel-shtern-project.png',
+    imgUrl: '/refoyl/img/yisroel-shtern-project.png',
     titleEn: 'Yisroel Shtern Project',
     titleYi: 'דער ישׂראל שטערן פּראָיעקט',
     comments: ''
@@ -491,49 +491,49 @@ const allResourcesData = [{
 },{
     category: 'other_yiddish_resources',
     url: 'https://mummeloohshen.wordpress.com/',
-    imgUrl: '/img/mumme-looshen.png',
+    imgUrl: '/refoyl/img/mumme-looshen.png',
     titleEn: 'Mumme Looshen',
     titleYi: '',
     comments: 'A linguistic book on Yiddish, with SY transcriptions'
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.yiddishbookcenter.org/collections/archival-recordings',
-    imgUrl: '/img/frances-brandt-online-yiddish-audio-library.png',
+    imgUrl: '/refoyl/img/frances-brandt-online-yiddish-audio-library.png',
     titleEn: 'Frances Brandt Online Yiddish Audio Library',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://pglasserblog.wordpress.com/2013/04/23/my-latest-maps-%D7%9E%D7%B2%D6%B7%D7%A0%D7%A2-%D7%A0%D7%B2%D6%B7%D7%A1%D7%98%D7%A2-%D7%9E%D7%90%D6%B7%D7%A4%D6%BC%D7%A2%D7%A1/',
-    imgUrl: '/img/maps-of-jewish-eastern-europe.png',
+    imgUrl: '/refoyl/img/maps-of-jewish-eastern-europe.png',
     titleEn: 'Maps of Jewish Eastern Europe (Hershl Glasser)',
     titleYi: '',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.nli.org.il/en/discover/newspapers/jpress',
-    imgUrl: '/img/historical-jewish-press.png',
+    imgUrl: '/refoyl/img/historical-jewish-press.png',
     titleEn: 'Historical Jewish Press',
     titleYi: '',
     comments: ''
 },{
     category: 'poetry',
     url: 'https://www.grosbardproject.com/Grosbard_Project/Home.html',
-    imgUrl: '/img/the-grosbard-project.png',
+    imgUrl: '/refoyl/img/the-grosbard-project.png',
     titleEn: 'The Grosbard Project',
     titleYi: 'דער גראָסבאַרד פּראָיעקט',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'http://web-corpora.net/YNC/search/',
-    imgUrl: '/img/redt.png',
+    imgUrl: '/refoyl/img/redt.png',
     titleEn: 'The Corpus of Modern Yiddish',
     titleYi: '',
     comments: ''
 },{
     category: 'music',
     url: 'https://ctmd.org/archive/collections/',
-    imgUrl: '/img/center-for-traditional-music-and-dance.png',
+    imgUrl: '/refoyl/img/center-for-traditional-music-and-dance.png',
     titleEn: 'Center for Traditional Music and Dance Jewish Song Collection',
     titleYi: '',
     comments: ''
