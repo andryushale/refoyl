@@ -114,9 +114,9 @@ const allResourcesData = [{
     category: 'non_ashkenazic_jewish_resources',
     url: 'http://www.ivri-nasawi.org/',
     imgUrl: '/refoyl/img/ivri-nasawi.png',
-    titleEn: 'Ivri Nasawi: New Association of Sephardi/Mizrahi Artists & Writers International',
+    titleEn: 'Ivri Nasawi',
     titleYi: '',
-    comments: ''
+    comments: 'New Association of Sephardi/Mizrahi Artists & Writers International'
 },{
     category: 'non_ashkenazic_jewish_resources',
     url: 'https://www.bjhc.org.il/',

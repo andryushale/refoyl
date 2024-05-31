@@ -7,22 +7,7 @@
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
   <script type="text/javascript">
-    $(document).ready(function(){
-        let x = '23 35 9 43 11 27 0 16 16 14 23 0 29 14 45 16 34 27 36 43';
-        let y = x.split(' ');
-        let z = [];
-        $.each(y, function(index, value)
-        {
-            z.push(Math.floor(Number(value)*2*100)/100);
-        });
-        // console.log(z.join(' '));
-
-        $('.textlist .resources_container').each(function(){
-            if (this.scrollHeight > $(window).height()*.7)
-            {
-                $(this).parent().addClass('overflowing');
-            }
-        });
+    $(document).ready(function(){ 
         
         //resize long captions in desktop view
         if (screen.width > 800)
@@ -34,6 +19,8 @@
                 }
             });
         }
+
+        //create special element for stars
         defineSVGStar();
 
         function defineSVGStar(){
@@ -61,51 +48,69 @@
             }
         }
 
+        // script to adapt size of svg-star
+        // let x = '23 35 9 43 11 27 0 16 16 14 23 0 29 14 45 16 34 27 36 43';
+        // let y = x.split(' ');
+        // let z = [];
+        // $.each(y, function(index, value)
+        // {
+        //     z.push(Math.floor(Number(value)*2*100)/100);
+        // });
+        // // console.log(z.join(' '));
+
+        //event used by function that closes mobile nav
         const onClickOutside = (element, callback) => {
             document.addEventListener('click', e => {
             if (!element.contains(e.target)) callback();
             });
         };
 
-        if (screen.width > 800)
+        if (screen.width > 800) //web-only adjustments
         {
-            var h = $('header #title').height();
-            h = h/100 * 40;
-            $('header #title h1').css('font-size', `${h}px`);
+            // $(window).resize(function(){
+            //     //adjust header title font size
+            //     // var h = $('header #title').height();
+            //     // h = h/100 * 40;
+            //     // $('header #title h1').css('font-size', `${h}px`);
+            // });
         }
-        else
+        else //mobile-only adjustments
         {
+            //resize mobile search bar
             $('nav#mobile input').attr('size', $('nav#mobile input').attr('placeholder').length);
 
+            //close mobile search
             onClickOutside($('nav#mobile').get(0), () =>  
             {
                 $('#search_results').css('background-color', '#52423B').slideUp(500);
                 $('#results, #search_query').html('');
                 $('input').val('');
                 resizeInput.call(input);
-            }  
-        );
+                }  
+            );
         }
 
-        var input = $('nav#mobile input').get(0); // get the input element
-        input.addEventListener('input', resizeInput); // bind the "resizeInput" callback on "input" event
-        resizeInput.call(input); // immediately call the function
+        //adjust mobile search input width
+        var input = $('nav#mobile input').get(0);
+        input.addEventListener('input', resizeInput); 
+        resizeInput.call(input);
 
         function resizeInput()
         {
             this.style.width = this.value.length+5 + "ch";
         }
 
-
+        //hide and show mobile nav 
         $('nav#mobile #nav_bullet').click(function(){
             $('#mobile_nav_links').slideToggle();
         });
 
+        // anchor links scroll & highlight
         $("a[href^=#]").click(function(e) {
             e.preventDefault();
             $('*').css('box-shadow', 'none');
             var dest = $(this).attr('href');
-            if (screen.width > 800)
+            if (screen.width > 800) //scroll
             {
                 $('html,body').animate({ scrollTop: $(dest).offset().top }, 'slow');
             }
@@ -113,41 +118,54 @@
             {
                 $('html,body').animate({ scrollTop: $(dest).offset().top - $('nav#mobile').height()}, 'slow');
             }
-            $(`${dest}`).css('box-shadow', 'inset 0 0 50px rgb(253, 198, 0)'); 
+            $(`${dest}`).css('box-shadow', 'inset 0 0 50px rgb(253, 198, 0)');  //highlight
         });
     });
   </script>
 
+<!-- TODO: TEST/COMMENT THROUGH JS CODE -->
 <script type="module" src="js/createResources.js" defer></script>
 <script type="text/javascript" src="js/colorArticles.js"></script>
 <script type="text/javascript" src="js/colorHoverLinks.js"></script>
 <script type="module" src="js/favorites.js" defer></script>
 <script type="module" src="js/searchItems.js"></script> 
 <!-- <script type="text/javascript" src="importExportFavorites.js"></script> TODO: EXPORT/IMPORT FAVORITES -->
+
 <script type="text/javascript">
 $(document).ready(function(){
-    const containBackgroundsByDataID = ["YIVO Institute for Jewish Research", "Jewish Public Library", "Committee for Yiddish", "Yugntruf", "Kulanu: Helping Lost Jewish Communities", "Jewish languages", "Yiddish bulletin board", "Virtual Shtetl"];
-        for (let item in containBackgroundsByDataID)
-        {
-            $(document).find(`[data-id="${containBackgroundsByDataID[item]}"]`).closest('div.img-stack').addClass('contain');
-        }
-    $('#body_container').css('visibility', 'visible');
+    //shorten long textlist container
+        $('.textlist .resources_container').each(function(){
+            if (this.scrollHeight > $(window).height()*.7)
+            {
+                $(this).parent().addClass('overflowing');
+            }
+        });
+
+    //adjust image size for too-small images
+        const containBackgroundsByDataID = ["YIVO Institute for Jewish Research", "Jewish Public Library", "Committee for Yiddish", "Yugntruf", "Kulanu: Helping Lost Jewish Communities", "Jewish languages", "Yiddish bulletin board", "Virtual Shtetl"];
+            for (let item in containBackgroundsByDataID)
+            {
+                $(document).find(`[data-id="${containBackgroundsByDataID[item]}"]`).closest('div.img-stack').addClass('contain');
+            }
+    
+    //show once everything is loaded
+        $('#body_container').css('visibility', 'visible');
 });
 </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Average&family=MedievalSharp&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Average&family=MedievalSharp&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-  <style type="text/css">
-/* import font */
+<style type="text/css">
+    /* import font */
     @font-face {
         font-family: 'Yiddishkeit';
         src: url('fonts/YiddishkeitAlefAlefAlef-Bold.otf'); 
         size-adjust: 130%;
     }
 
-    /* structure */
+    /* structure, applies to both web and mobile */
     body, h3, h4, p
     {
         margin: 0;
@@ -171,6 +189,11 @@ $(document).ready(function(){
         display: flex;
         justify-content: space-between;
         padding: 10px 50px;
+    }
+    header #title img
+    {
+        align-self: center;
+        height: 6vw;
     }
     header nav#web
     {
@@ -364,7 +387,7 @@ $(document).ready(function(){
         padding: 50px;
     }
 
-    /* ornaments */
+    /* style, applies to both web and mobile */
     header
     {
         background-color: #52423B;
@@ -377,7 +400,8 @@ $(document).ready(function(){
     }
     header #title h1
     {
-        font-size: 6vh;
+        font-size: 3vw;
+        align-self: center;
     }
     header input
     {
@@ -465,7 +489,6 @@ $(document).ready(function(){
     }
     article .resource h3, #empty_message h1
     {
-        /* YIDDISH FONT*/
         font-family: 'Yiddishkeit', 'DM Serif Display', 'Georgia';
     }
     article .resource h3
@@ -500,12 +523,10 @@ $(document).ready(function(){
     and (min-device-width: 300px) 
     and (max-device-width: 812px) 
     and (orientation: portrait) { 
-
         body
         {
             font-size: 5vw;
         }
-
         #title, nav#web 
         {
             display: none !important;
@@ -597,7 +618,6 @@ $(document).ready(function(){
         {
             align-items: center;
         }
-        
         article h3
         {
             display: flex;
@@ -628,7 +648,7 @@ $(document).ready(function(){
         }
         article .resource h3, #empty_message h1
         {
-            font-weight: 400;
+            font-weight: 400 !important;
         }
         article .resource .img-stack
         {
