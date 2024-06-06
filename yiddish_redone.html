@@ -156,6 +156,7 @@ $(document).ready(function(){
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Average&family=MedievalSharp&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<!-- TODO: modify 'Bona Nova' and 'Yiddishkeit' to accept royfe-fey and pasekh-tsvey-yudn -->
 
 <style type="text/css">
     /* import font */
@@ -487,7 +488,7 @@ $(document).ready(function(){
         display: flex;
         flex-direction: column;
     }
-    article .resource h3, #empty_message h1
+    article .resource h3, #empty_message h1, .yi_subheading
     {
         font-family: 'Yiddishkeit', 'DM Serif Display', 'Georgia';
     }
@@ -597,17 +598,17 @@ $(document).ready(function(){
             color: #FEDFD3;
             background-color: #52423B !important;
         }
-        #search_results #results *
+        #search_results #results *, #search_results .resource a
         {
-            color: #FEDFD3 !important;
+            color: #FEDFD3;
+        }
+        #search_results .highlight
+        {
+            color: #52423B !important;
         }
         #search_results #results .resource
         {
             border-bottom: none;
-        }
-        #search_results .resource a
-        {
-            color: #FEDFD3;
         }
         #body_container
         {
@@ -616,16 +617,24 @@ $(document).ready(function(){
         }
         #search_results #results
         {
-            align-items: center;
+            align-items: flex-start;
         }
         article h3
         {
             display: flex;
             flex-direction: column !important;
         }
+        article #results h3
+        {
+            display: block;
+        }
         article h3 span
         {
             text-align: center !important;
+        }
+        article #results h3 span 
+        {
+            font-weight: bold;
         }
         article .resources_container
         {
@@ -661,6 +670,12 @@ $(document).ready(function(){
         {
             position: relative;
             right: -125px;
+        }
+        article#search_results #results .resource .img-stack .shterndl
+        {
+            position: relative;
+            bottom: -125px;
+            right: 0px;
         }
         article .resource .item-info
         {
@@ -753,7 +768,6 @@ $(document).ready(function(){
         border-radius: 1em;
         cursor: pointer;
     }
-
     article .resource h3, #empty_message h1
     {
         font-weight: 700;
@@ -847,12 +861,12 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Quick Links</span>
-                    <span>מײַן געצײַג</span>
+                    <span class="yi_subheading">מײַן געצײַג</span>
                 </h3>
             </div>
             <div class="resources_container">
                 <div id="empty_message">
-                    <h1>אױ װײ!</h1>
+                    <h1>אױ ווײ!</h1>
                     <p>You haven't saved any quick links yet.</p><br>
                     <p>Click the star icons alongside each resource to add quick links.</p>
                 </div>
@@ -862,7 +876,7 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Dictionaries</span>
-                    <span>װערטערביכער</span>
+                    <span class="yi_subheading">ווערטערביכער</span>
                 </h3>
             </div>
             <div class="resources_container"></div>
@@ -871,7 +885,7 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Text Processing Tools</span>
-                    <span>שרײַבערקעס</span>
+                    <span class="yi_subheading">שרײַבערקעס</span>
                 </h3>
             </div>
             <div class="resources_container"></div>
@@ -880,7 +894,7 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Fonts</span>
-                    <span>שריפטן</span>
+                    <span class="yi_subheading">שריפטן</span>
                 </h3>
             </div>
             <div class="resources_container"></div>
@@ -890,7 +904,7 @@ $(document).ready(function(){
                 <div class="heading">
                     <h3>
                         <span>Yiddish Texts</span>
-                        <span>טעקסטן אױף ייִדיש</span>
+                        <span class="yi_subheading">טעקסטן אױף ייִדיש</span>
                     </h3>
                 </div>
                 <div class="resources_container"></div>
@@ -900,7 +914,7 @@ $(document).ready(function(){
                 <div class="heading">
                     <h3>
                         <span>Non-Yiddish Texts</span>
-                        <span>טעקסטן אױף אַנדערע שפּראַכן</span>
+                        <span class="yi_subheading">טעקסטן אױף אַנדערע שפּראַכן</span>
                     </h3>
                 </div>
                 <div class="resources_container"></div>
@@ -911,7 +925,7 @@ $(document).ready(function(){
                 <div class="heading">
                     <h3>
                         <span>Yiddish Poetry</span>
-                        <span>ייִדישע פּאָעזיע</span>
+                        <span class="yi_subheading">ייִדישע פּאָעזיע</span>
                     </h3>
                 </div>
                 <div class="resources_container"></div>
@@ -920,7 +934,7 @@ $(document).ready(function(){
                 <div class="heading">
                     <h3>
                         <span>Yiddish Music</span>
-                        <span>ייִדישע מוזיק</span>
+                        <span class="yi_subheading">ייִדישע מוזיק</span>
                     </h3>
                 </div>
                 <div class="resources_container"></div>
@@ -930,7 +944,7 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Yiddish Organizations</span>
-                    <span>ייִדיש־אָרגאַניזאַציעס</span>
+                    <span class="yi_subheading">ייִדיש־אָרגאַניזאַציעס</span>
                 </h3>
             </div>
             <div class="resources_container"></div>
@@ -939,7 +953,7 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Other Yiddish Resources</span>
-                    <span>אַנדערע רעסורסן פאַר ייִדיש</span>
+                    <span class="yi_subheading">אַנדערע רעסורסן פאַר ייִדיש</span>
                 </h3>
             </div>
             <div class="resources_container"></div>
@@ -948,7 +962,7 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Non-Ashkenazic Jewish Resources</span>
-                    <span>אַנדערע ייִדישע רעסורסן</span>
+                    <span class="yi_subheading">אַנדערע ייִדישע רעסורסן</span>
                 </h3>
             </div>
             <div class="resources_container"></div>
@@ -957,7 +971,7 @@ $(document).ready(function(){
             <div class="heading">
                 <h3>
                     <span>Places where this page is listed</span>
-                    <span>שותּפים</span>
+                    <span class="yi_subheading">שותּפים</span>
                 </h3>
             </div>
             <div class="resources_container"></div>

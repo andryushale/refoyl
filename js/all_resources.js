@@ -3,56 +3,56 @@ const allResourcesData = [{
     url: 'https://www.cs.uky.edu/~raphael/yiddish/dictionary.cgi',
     imgUrl: '/refoyl/img/searchable-yiddish-english-dictionary.png',
     titleEn: 'Searchable Yiddish-English dictionary',
-    titleYi: 'ייִדיש<wbr>־ענגליש װערטערבוך',
+    titleYi: 'ייִדיש<wbr>־ענגליש ווערטערבוך',
     comments: ''
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/searchOytser.cgi',
     imgUrl: '/refoyl/img/shutshkovs-oytser.png',
     titleEn: 'Stutshkov\'s Oytser',
-    titleYi: 'סטוטשקאָװס אוצר',
+    titleYi: 'סטוטשקאָווס אוצר',
     comments: 'Searchable, transliteration only'
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/harkavy/index.utf8.html',
     imgUrl: '/refoyl/img/harkavys-1910-bidirectional-dictionary.png',
     titleEn: 'Harkavy\'s 1910 bidirectional dictionary',
-    titleYi: 'האַרקאַװיס ענגליש<wbr>־ייִדיש ייִדיש<wbr>־ענגליש װערטערבוך',
+    titleYi: 'האַרקאַוויס ענגליש<wbr>־ייִדיש ייִדיש<wbr>־ענגליש ווערטערבוך',
     comments: ''
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/searchGroys.cgi',
     imgUrl: '/refoyl/img/der-groyser-verterbukh-fun-der-yidisher-shprakh.png',
     titleEn: 'Der Groyser Verterbukh fun der Yidisher Shprakh',
-    titleYi: 'דער גרױסער װערטערבוך פון דער ייִדישער שפּראַך',
+    titleYi: 'דער גרױסער ווערטערבוך פון דער ייִדישער שפּראַך',
     comments: 'Searchable, Yiddish letters only'
 },{
     category: 'dictionaries',
     url: 'http://www.hebrewbooks.org/43653',
     imgUrl: '/refoyl/img/weinreichs-bidirectional-dictionary.png',
     titleEn: 'Weinreich\'s bidirectional dictionary ',
-    titleYi: 'מאָדערן ענגליש<wbr>־ייִדיש ייִדיש<wbr>־ענגליש װערטערבוך',
+    titleYi: 'מאָדערן ענגליש<wbr>־ייִדיש ייִדיש<wbr>־ענגליש ווערטערבוך',
     comments: 'Off-site. Searchable!'
 },{
     category: 'dictionaries',
     url: 'http://www.hebrewbooks.org/43567',
     imgUrl: '/refoyl/img/harkavys-yiddish-english-hebrew-dictionary.png',
     titleEn: 'Harkavy\'s Yiddish-English-Hebrew dictionary',
-    titleYi: 'האַרקאַװיס ייִדיש<wbr>־ענגליש<wbr>־העברעיִש װערטערבוך',
+    titleYi: 'האַרקאַוויס ייִדיש<wbr>־ענגליש<wbr>־העברעיִש ווערטערבוך',
     comments: '1928 expanded 2nd edition. Off-site. Searchable!'
 },{
     category: 'dictionaries',
     url: 'https://www.cs.uky.edu/~raphael/yiddish/justus.cgi',
     imgUrl: '/refoyl/img/searchable-yiddish-dutch-dictionary.png',
     titleEn: 'Searchable Yiddish-Dutch dictionary',
-    titleYi: 'ייִדיש<wbr>־האָנענדיש װערטערבוך',
+    titleYi: 'ייִדיש<wbr>־האָנענדיש ווערטערבוך',
     comments: 'Very comprehensive; data from Justus van de Kamp. His dictionary site is <a href="https://jnw.test.ivdnt.org/" target="_blank">Jiddische Lexicografie Amsterdam.</a>'
 },{
     category: 'dictionaries',
     url: 'http://verterbukh.org/',
     imgUrl: '/refoyl/img/verterbukh.png',
     titleEn: 'Comprehensive Yiddish-English Dictionary',
-    titleYi: 'אַרומנעמיק ייִדיש<wbr>־ענגליש װערטערבוך',
+    titleYi: 'אַרומנעמיק ייִדיש<wbr>־ענגליש ווערטערבוך',
     comments: 'Beinfeld & Bochner'
 },{
     category: 'text_tools',
@@ -136,7 +136,7 @@ const allResourcesData = [{
     url: 'http://www.yivo.org',
     imgUrl: '/refoyl/img/yivo-institute-for-jewish-research.png',
     titleEn: 'YIVO Institute for Jewish Research',
-    titleYi: 'ייִװאָ: דער ייִדישער װיסנשאַפטלעכע אינסטיטוט',
+    titleYi: 'ייִוואָ: דער ייִדישער וויסנשאַפטלעכע אינסטיטוט',
     comments: ''
 },{
     category: 'yiddish_organizations',
@@ -234,7 +234,7 @@ const allResourcesData = [{
     url: 'https://ruthrubin.yivo.org/exhibits/show/ruth-rubin-sound-archive/home',
     imgUrl: '/refoyl/img/ruth-rubin-sound-archive.png',
     titleEn: 'Ruth Rubin Sound Archive',
-    titleYi: 'רות רובין אַרכיװ',
+    titleYi: 'רות רובין אַרכיוו',
     comments: ''
 },{
     category: 'music',
@@ -248,7 +248,7 @@ const allResourcesData = [{
     url: 'https://www.xn--7dbli0a4a.us.org/',
     imgUrl: '/refoyl/img/the-online-treasury-of-yiddish-poetry.png',
     titleEn: 'The Online Treasury of Yiddish Poetry',
-    titleYi: 'דער אױפן<wbr>־װעב אוצר פון ייִדישע לידער',
+    titleYi: 'דער אױפן<wbr>־וועב אוצר פון ייִדישע לידער',
     comments: ''
 },{
     category: 'other_yiddish_resources',
@@ -262,7 +262,7 @@ const allResourcesData = [{
     url: 'https://editions.yiddish.paris/wp-content/uploads/2021/06/%D7%A4%D6%BF%D7%90%D6%B8%D7%A0%D7%A2%D7%98%D7%99%D7%A9%D7%A2%D7%A8-%D7%90%D7%99%D7%A0%D7%93%D7%A2%D7%A7%D7%A1.pdf',
     imgUrl: '/refoyl/img/list-of-semitic-words-in-yiddish.png',
     titleEn: 'List of Semitic words in Yiddish, organized by pronunciation',
-    titleYi: 'פאָנעטישער אינדעקס פון לשון־קודש־שטאַמענדיקע װערטער אין ייִדיש',
+    titleYi: 'פאָנעטישער אינדעקס פון לשון־קודש־שטאַמענדיקע ווערטער אין ייִדיש',
     comments: ''
 },{
     category: 'dictionaries',
@@ -276,14 +276,14 @@ const allResourcesData = [{
     url: 'https://yivoencyclopedia.org/',
     imgUrl: '/refoyl/img/yivo-encyclopedia-of-jews-in-eastern-europe.png',
     titleEn: 'YIVO Encyclopedia of Jews in Eastern Europe',
-    titleYi: 'די ייִװאָ ענציקלאָפּעדיע פון ייִדן אין מזרח־אייראָפּע',
+    titleYi: 'די ייִוואָ ענציקלאָפּעדיע פון ייִדן אין מזרח־אייראָפּע',
     comments: ''
 },{
     category: 'other_yiddish_resources',
     url: 'https://www.leyblsvelt.co.il/',
     imgUrl: '/refoyl/img/leybls-velt.png',
     titleEn: 'Leybls velt',
-    titleYi: 'לייבלס װעלט',
+    titleYi: 'לייבלס וועלט',
     comments: ''
 },{
     category: 'poetry',
@@ -311,7 +311,7 @@ const allResourcesData = [{
     url: 'https://yiddish.forward.com/blogs/index.html',
     imgUrl: '/refoyl/img/yiddish-forward-blogs.png',
     titleEn: 'Yiddish Forward Blogs',
-    titleYi: 'פאָרװערטס־בלאָגס',
+    titleYi: 'פאָרווערטס־בלאָגס',
     comments: ''
 },{
     category: 'music',
@@ -444,7 +444,7 @@ const allResourcesData = [{
     url: 'https://inmolaraan.blogspot.com/',
     imgUrl: '/refoyl/img/in-mol-araan-a-blogele-vegen-esn-un-verter.png',
     titleEn: 'In mol araan: a blogele vegn esn un verter',
-    titleYi: 'אין מױל ארײן: א בלאגעלע װעגן עסן און װערטער',
+    titleYi: 'אין מױל ארײן: א בלאגעלע וועגן עסן און ווערטער',
     comments: ''
 },{
     category: 'other_yiddish_resources',
@@ -465,7 +465,7 @@ const allResourcesData = [{
     url: 'https://yiddish.haifa.ac.il/contents.htm',
     imgUrl: '/refoyl/img/the-world-of-yiddish.png',
     titleEn: 'The World of Yiddish',
-    titleYi: 'די װעלט פון ייִדיש',
+    titleYi: 'די וועלט פון ייִדיש',
     comments: ''
 },{
     category: 'other_yiddish_resources',
